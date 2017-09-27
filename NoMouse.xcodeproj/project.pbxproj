@@ -10,6 +10,9 @@
 		95349CF31F7A9FA5007CD4C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349CF21F7A9FA5007CD4C0 /* AppDelegate.swift */; };
 		95349CF51F7A9FA5007CD4C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95349CF41F7A9FA5007CD4C0 /* Assets.xcassets */; };
 		95349CF81F7A9FA5007CD4C0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95349CF61F7A9FA5007CD4C0 /* MainMenu.xib */; };
+		95349D011F7AA097007CD4C0 /* Monitors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D001F7AA097007CD4C0 /* Monitors.swift */; };
+		95349D031F7AC2A9007CD4C0 /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D021F7AC2A9007CD4C0 /* Monitor.swift */; };
+		95349D051F7AF97C007CD4C0 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D041F7AF97C007CD4C0 /* EventMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		95349CF71F7A9FA5007CD4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		95349CF91F7A9FA5007CD4C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95349CFA1F7A9FA5007CD4C0 /* NoMouse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NoMouse.entitlements; sourceTree = "<group>"; };
+		95349D001F7AA097007CD4C0 /* Monitors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monitors.swift; sourceTree = "<group>"; };
+		95349D021F7AC2A9007CD4C0 /* Monitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monitor.swift; sourceTree = "<group>"; };
+		95349D041F7AF97C007CD4C0 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				95349CF21F7A9FA5007CD4C0 /* AppDelegate.swift */,
+				95349D041F7AF97C007CD4C0 /* EventMonitor.swift */,
+				95349D001F7AA097007CD4C0 /* Monitors.swift */,
+				95349D021F7AC2A9007CD4C0 /* Monitor.swift */,
 				95349CF41F7A9FA5007CD4C0 /* Assets.xcassets */,
 				95349CF61F7A9FA5007CD4C0 /* MainMenu.xib */,
 				95349CF91F7A9FA5007CD4C0 /* Info.plist */,
@@ -131,7 +140,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95349D011F7AA097007CD4C0 /* Monitors.swift in Sources */,
+				95349D031F7AC2A9007CD4C0 /* Monitor.swift in Sources */,
 				95349CF31F7A9FA5007CD4C0 /* AppDelegate.swift in Sources */,
+				95349D051F7AF97C007CD4C0 /* EventMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
