@@ -9,15 +9,16 @@
 import Foundation
 
 class Monitors {
-    let BRIGHTNESS_INCREMENT : Float = 0.015
-    let BRIGHTNESS_DECREMENT : Float = -0.1
+    let BRIGHTNESS_INCREMENT: Float = 0.015
+    let BRIGHTNESS_DECREMENT: Float = -0.1
+    var decrementMultiplier:  Float = 1
     
-    var decrementMultiplier: Float = 1
+    var monitors = [Monitor]()
+    
     var defaultBrightness: Float
     var brightness: Float {
         return monitors.first?.getBrightness() ?? 0.0
     }
-    var monitors = [Monitor]()
     
     init() {
         var iterator: io_iterator_t = 0
@@ -27,7 +28,7 @@ class Monitors {
             var service: io_object_t = 1
             
             while service != 0 {
-                service = IOIteratorNext(iterator)
+                service     = IOIteratorNext(iterator)
                 let monitor = Monitor(service: service)
                 monitors.append(monitor)
             }

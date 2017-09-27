@@ -18,6 +18,7 @@
 		95349D191F7B72AE007CD4C0 /* BackgroundLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 95349D0A1F7B714A007CD4C0 /* BackgroundLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		95349D1C1F7B72E0007CD4C0 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95349D1B1F7B72E0007CD4C0 /* ServiceManagement.framework */; };
 		95349D1E1F7B72E7007CD4C0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95349D1D1F7B72E7007CD4C0 /* Cocoa.framework */; };
+		95349D201F7B857F007CD4C0 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D1F1F7B857F007CD4C0 /* Setting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +51,7 @@
 		95349D141F7B714A007CD4C0 /* BackgroundLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BackgroundLauncher.entitlements; sourceTree = "<group>"; };
 		95349D1B1F7B72E0007CD4C0 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		95349D1D1F7B72E7007CD4C0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		95349D1F1F7B857F007CD4C0 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				95349CF21F7A9FA5007CD4C0 /* AppDelegate.swift */,
+				95349D1F1F7B857F007CD4C0 /* Setting.swift */,
 				95349D041F7AF97C007CD4C0 /* EventMonitor.swift */,
 				95349D001F7AA097007CD4C0 /* Monitors.swift */,
 				95349D021F7AC2A9007CD4C0 /* Monitor.swift */,
@@ -228,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95349D201F7B857F007CD4C0 /* Setting.swift in Sources */,
 				95349D011F7AA097007CD4C0 /* Monitors.swift in Sources */,
 				95349D031F7AC2A9007CD4C0 /* Monitor.swift in Sources */,
 				95349CF31F7A9FA5007CD4C0 /* AppDelegate.swift in Sources */,
