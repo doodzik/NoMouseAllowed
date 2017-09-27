@@ -20,6 +20,10 @@ class EventMonitor {
     }
     var events: [Setting: AnyObject] = [:]
     
+    func resetScreens() {
+        monitors = Monitors()
+    }
+    
     func start(mask: Setting) {
         events[mask] = NSEvent.addGlobalMonitorForEvents(matching: mask.eventMask, handler: penalty) as AnyObject
     }

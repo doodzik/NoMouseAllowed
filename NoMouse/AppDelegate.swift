@@ -69,6 +69,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.menu  = menu
     }
     
+    func applicationDidChangeScreenParameters(_ notification: Notification) {
+        eventMonitor.resetScreens()
+    }
+    
     // MARK: Actions
 
     @IBAction func toggleStartAtLogin(_ sender: NSMenuItem) {
