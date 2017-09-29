@@ -35,7 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		95349CEF1F7A9FA5007CD4C0 /* NoMouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoMouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95349CEF1F7A9FA5007CD4C0 /* NoMouseAllowed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoMouseAllowed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95349CF21F7A9FA5007CD4C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95349CF41F7A9FA5007CD4C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95349CF71F7A9FA5007CD4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		95349CF01F7A9FA5007CD4C0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95349CEF1F7A9FA5007CD4C0 /* NoMouse.app */,
+				95349CEF1F7A9FA5007CD4C0 /* NoMouseAllowed.app */,
 				95349D0A1F7B714A007CD4C0 /* BackgroundLauncher.app */,
 			);
 			name = Products;
@@ -132,9 +132,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		95349CEE1F7A9FA5007CD4C0 /* NoMouse */ = {
+		95349CEE1F7A9FA5007CD4C0 /* NoMouseAllowed */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 95349CFD1F7A9FA5007CD4C0 /* Build configuration list for PBXNativeTarget "NoMouse" */;
+			buildConfigurationList = 95349CFD1F7A9FA5007CD4C0 /* Build configuration list for PBXNativeTarget "NoMouseAllowed" */;
 			buildPhases = (
 				95349CEB1F7A9FA5007CD4C0 /* Sources */,
 				95349CEC1F7A9FA5007CD4C0 /* Frameworks */,
@@ -145,9 +145,9 @@
 			);
 			dependencies = (
 			);
-			name = NoMouse;
+			name = NoMouseAllowed;
 			productName = NoMouse;
-			productReference = 95349CEF1F7A9FA5007CD4C0 /* NoMouse.app */;
+			productReference = 95349CEF1F7A9FA5007CD4C0 /* NoMouseAllowed.app */;
 			productType = "com.apple.product-type.application";
 		};
 		95349D091F7B714A007CD4C0 /* BackgroundLauncher */ = {
@@ -187,7 +187,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 95349CEA1F7A9FA5007CD4C0 /* Build configuration list for PBXProject "NoMouse" */;
+			buildConfigurationList = 95349CEA1F7A9FA5007CD4C0 /* Build configuration list for PBXProject "NoMouseAllowed" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -200,7 +200,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				95349CEE1F7A9FA5007CD4C0 /* NoMouse */,
+				95349CEE1F7A9FA5007CD4C0 /* NoMouseAllowed */,
 				95349D091F7B714A007CD4C0 /* BackgroundLauncher */,
 			);
 		};
@@ -436,7 +436,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		95349CEA1F7A9FA5007CD4C0 /* Build configuration list for PBXProject "NoMouse" */ = {
+		95349CEA1F7A9FA5007CD4C0 /* Build configuration list for PBXProject "NoMouseAllowed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				95349CFB1F7A9FA5007CD4C0 /* Debug */,
@@ -445,7 +445,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95349CFD1F7A9FA5007CD4C0 /* Build configuration list for PBXNativeTarget "NoMouse" */ = {
+		95349CFD1F7A9FA5007CD4C0 /* Build configuration list for PBXNativeTarget "NoMouseAllowed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				95349CFE1F7A9FA5007CD4C0 /* Debug */,

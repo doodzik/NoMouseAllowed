@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:NoMouse.xcodeproj">
+      location = "self:/Users/dudzik/NoMouse/NoMouseAllowed.xcodeproj">
    </FileRef>
 </Workspace>
