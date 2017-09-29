@@ -21,18 +21,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var menu: NSMenu!
     
-    @IBOutlet weak var startAtLogin:      NSMenuItem! {
+    @IBOutlet weak var startAtLogin: NSMenuItem! {
         didSet {
             startAtLogin.state = Setting.startAtLogin.state
         }
     }
-    @IBOutlet weak var harshPenalty:      NSMenuItem! {
+    @IBOutlet weak var harshPenalty: NSMenuItem! {
         didSet {
             harshPenalty.state = Setting.harshPenalty.state
             eventMonitor.harsh = harshPenalty.state == .on
         }
     }
-    @IBOutlet weak var penalizeClick:     NSMenuItem! {
+    @IBOutlet weak var penalizeClick: NSMenuItem! {
         didSet {
             penalizeClick.state = Setting.penalizeClick.state
             if penalizeClick.state == .on {
@@ -40,7 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
     }
-    @IBOutlet weak var penelizeMovement:  NSMenuItem! {
+    @IBOutlet weak var penelizeMovement: NSMenuItem! {
         didSet {
             penelizeMovement.state = Setting.penalizeMovement.state
             if penelizeMovement.state == .on {
@@ -60,12 +60,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // MARK: Lifecycle
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        /*
         let icon = NSImage(named: NSImage.Name(rawValue: "statusIcon"))
         icon?.isTemplate = true
         statusItem.image = icon
-         */
-        statusItem.title = "NoMouse"
+        statusItem.title = ""
         statusItem.menu  = menu
     }
     
@@ -73,7 +71,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         eventMonitor.resetScreens()
     }
     
-    // MARK: Actions
+    // MARK: UI-Actions
 
     @IBAction func toggleStartAtLogin(_ sender: NSMenuItem) {
         let state = toggle(sender, for: .startAtLogin)
@@ -104,7 +102,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApplication.shared.terminate(self)
     }
     
-    // MARK: Custom
+    // MARK: Actions
     
     func toggle (_ sender: NSMenuItem, for setting: Setting) -> NSControl.StateValue {
         let state: NSControl.StateValue = sender.state == .on ? .off : .on
@@ -113,11 +111,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return state
     }
     
-    func eventMonitorChange(state: NSControl.StateValue, for mask: Setting) {
+    func eventMonitorChange(state: NSControl.StateValue, for setting: Setting) {
         if state == .on {
-            eventMonitor.start(mask: mask)
+            eventMonitor.start(setting: setting)
         } else {
-            eventMonitor.stop(mask: mask)
+            eventMonitor.stop(setting: setting)
         }
     }
     

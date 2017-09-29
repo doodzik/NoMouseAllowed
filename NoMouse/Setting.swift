@@ -17,7 +17,7 @@ enum Setting: String {
     case penalizeScrolling = "penalizeScrolling"
     
     var state: NSControl.StateValue {
-        return UserDefaults.standard.bool(forKey: self.rawValue) ? .on : .off
+        return UserDefaults.standard.bool(forKey: rawValue) ? .on : .off
     }
     
     var eventMask: NSEvent.EventTypeMask {
@@ -29,13 +29,13 @@ enum Setting: String {
         case .penalizeScrolling:
             return .scrollWheel
         default:
-            fatalError("mask not implemented")
+            fatalError("\(rawValue) setting enum: EventTypeMask not implemented")
         }
     }
     
     func change(to: NSControl.StateValue) {
         let isOn = to == .on
-        UserDefaults.standard.set(isOn, forKey: self.rawValue)
+        UserDefaults.standard.set(isOn, forKey: rawValue)
     }
 
 }

@@ -10,6 +10,8 @@ import Foundation
 import Cocoa
 
 class EventMonitor {
+    
+    let RESTAURATION_TIME_IN_SECONDS = 4.0
 
     var timer: Timer?
     var monitors = Monitors()
@@ -24,27 +26,27 @@ class EventMonitor {
         monitors = Monitors()
     }
     
-    func start(mask: Setting) {
-        events[mask] = NSEvent.addGlobalMonitorForEvents(matching: mask.eventMask, handler: penalty) as AnyObject
+    func start(setting: Setting) {
+        events[setting] = NSEvent.addGlobalMonitorForEvents(matching: setting.eventMask, handler: penalty) as AnyObject
     }
     
-    func stop(mask: Setting) {
-        if let event = events[mask] {
+    func stop(setting: Setting) {
+        if let event = events[setting] {
             NSEvent.removeMonitor(event)
-            events.removeValue(forKey: mask)
+            events.removeValue(forKey: setting)
         }
     }
     
     func penalty (_ event: NSEvent) {
         self.monitors.decrement()
-        if let timer = self.timer {
-            timer.invalidate()
+        if let oldTimer = timer {
+            oldTimer.invalidate()
         }
         
-        self.timer = Timer.scheduledTimer(withTimeInterval: 4.0, repeats: false) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: RESTAURATION_TIME_IN_SECONDS, repeats: false) { _ in
             self.monitors.restore()
         }
-        RunLoop.main.add(self.timer!, forMode: RunLoopMode.commonModes)
+        RunLoop.main.add(timer!, forMode: RunLoopMode.commonModes)
     }
 
 }

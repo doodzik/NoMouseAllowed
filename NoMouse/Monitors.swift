@@ -48,9 +48,10 @@ class Monitors {
         defaultBrightness = brightness
     }
     
-    private func change(by delta: Float) {
+    func change(by delta: Float) {
         for monitor: Monitor in monitors {
             monitor.change(by: delta)
         }
     }
+
 }

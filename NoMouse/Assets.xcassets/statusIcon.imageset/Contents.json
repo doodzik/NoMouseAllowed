@@ -2,10 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "mouse_18.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "mouse_36.png",
       "scale" : "2x"
     },
     {
