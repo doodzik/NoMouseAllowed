@@ -12,11 +12,19 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+
         let mainAppIdentifier = "co.dudzik.NoMouse"
-        let path = NSWorkspace.shared.absolutePathForApplication(withBundleIdentifier: mainAppIdentifier)
-        NSWorkspace.shared.launchApplication(path!)
-        NSApplication.shared.terminate(self)
+
+        if !NSRunningApplication.runningApplications(withBundleIdentifier: mainAppIdentifier).isEmpty {
+            NSApp.terminate(nil)
+            return
+        }
+
+        let launcherURL = Bundle.main.bundleURL
+        let appURL = launcherURL.deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()
+
+        try! NSWorkspace.shared.launchApplication(at: appURL, options: .default, configuration: [:])
+        NSApp.terminate(nil)
     }
     
 }
-

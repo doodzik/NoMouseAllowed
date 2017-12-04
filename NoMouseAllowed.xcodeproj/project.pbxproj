@@ -14,7 +14,6 @@
 		95349D031F7AC2A9007CD4C0 /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D021F7AC2A9007CD4C0 /* Monitor.swift */; };
 		95349D051F7AF97C007CD4C0 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D041F7AF97C007CD4C0 /* EventMonitor.swift */; };
 		95349D0D1F7B714A007CD4C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D0C1F7B714A007CD4C0 /* AppDelegate.swift */; };
-		95349D0F1F7B714A007CD4C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95349D0E1F7B714A007CD4C0 /* Assets.xcassets */; };
 		95349D191F7B72AE007CD4C0 /* BackgroundLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 95349D0A1F7B714A007CD4C0 /* BackgroundLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		95349D1C1F7B72E0007CD4C0 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95349D1B1F7B72E0007CD4C0 /* ServiceManagement.framework */; };
 		95349D1E1F7B72E7007CD4C0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95349D1D1F7B72E7007CD4C0 /* Cocoa.framework */; };
@@ -46,7 +45,6 @@
 		95349D041F7AF97C007CD4C0 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		95349D0A1F7B714A007CD4C0 /* BackgroundLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95349D0C1F7B714A007CD4C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		95349D0E1F7B714A007CD4C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95349D131F7B714A007CD4C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95349D141F7B714A007CD4C0 /* BackgroundLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BackgroundLauncher.entitlements; sourceTree = "<group>"; };
 		95349D1B1F7B72E0007CD4C0 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
@@ -113,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				95349D0C1F7B714A007CD4C0 /* AppDelegate.swift */,
-				95349D0E1F7B714A007CD4C0 /* Assets.xcassets */,
 				95349D131F7B714A007CD4C0 /* Info.plist */,
 				95349D141F7B714A007CD4C0 /* BackgroundLauncher.entitlements */,
 			);
@@ -220,7 +217,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95349D0F1F7B714A007CD4C0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +398,6 @@
 		95349D161F7B714A007CD4C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BackgroundLauncher/BackgroundLauncher.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -419,7 +414,6 @@
 		95349D171F7B714A007CD4C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BackgroundLauncher/BackgroundLauncher.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
