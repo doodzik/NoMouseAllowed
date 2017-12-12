@@ -8,7 +8,7 @@
 
 NoMouseAllowed nudges the user towards using the keyboard by discouraging the use of the mouse.
 It lowers the screen brightness when you use your mouse.
-The brightness gets restored after 6 seconds.
+The brightness gets restored after 4 seconds.
 You can choose wether you want to discourage clicking, moving or scrolling.
 
 Pull Requests are welcome.
