@@ -12,116 +12,34 @@ import ServiceManagement
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    // MARK: Properties
-    
-    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-    var eventMonitor = EventMonitor()
-    
-    // MARK: Outlets
-    
-    @IBOutlet weak var menu: NSMenu!
-    
-    @IBOutlet weak var startAtLogin: NSMenuItem! {
+    @IBOutlet weak var launchAtLoginOutlet: NSButton! {
         didSet {
-            startAtLogin.state = Setting.startAtLogin.state
-        }
-    }
-    @IBOutlet weak var harshPenalty: NSMenuItem! {
-        didSet {
-            harshPenalty.state = Setting.harshPenalty.state
-            eventMonitor.harsh = harshPenalty.state == .on
-        }
-    }
-    @IBOutlet weak var penalizeClick: NSMenuItem! {
-        didSet {
-            penalizeClick.state = Setting.penalizeClick.state
-            if penalizeClick.state == .on {
-                eventMonitorChange(state: .on, for: .penalizeClick)
-            }
-        }
-    }
-    @IBOutlet weak var penelizeMovement: NSMenuItem! {
-        didSet {
-            penelizeMovement.state = Setting.penalizeMovement.state
-            if penelizeMovement.state == .on {
-                eventMonitorChange(state: .on, for: .penalizeMovement)
-            }
-        }
-    }
-    @IBOutlet weak var penalizeScrolling: NSMenuItem! {
-        didSet {
-            penalizeScrolling.state = Setting.penalizeScrolling.state
-            if penalizeScrolling.state == .on {
-                eventMonitorChange(state: .on, for: .penalizeScrolling)
-            }
+            launchAtLoginOutlet.state = UserDefaults.standard.bool(forKey: "launchAtLogin") ? .on : .off
         }
     }
     
-    // MARK: Lifecycle
-    
+    let launcherAppIdentifier = "co.dudzik.NoMouse.BackgroundLauncher"
+    let launcherURL = Bundle.main.bundleURL
+    let bundleId = Bundle.main.bundleIdentifier
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        let icon = NSImage(named: NSImage.Name(rawValue: "statusIcon"))
-        icon?.isTemplate = true
-        statusItem.image = icon
-        statusItem.title = ""
-        statusItem.menu  = menu
-    }
-    
-    func applicationDidChangeScreenParameters(_ notification: Notification) {
-        eventMonitor.resetScreens()
-    }
-    
-    // MARK: UI-Actions
-
-    @IBAction func toggleStartAtLogin(_ sender: NSMenuItem) {
-        let state = toggle(sender, for: .startAtLogin)
-        startInBackground(state == .on)
-    }
-    
-    @IBAction func toggleHarshPenalty(_ sender: NSMenuItem) {
-        let state = toggle(sender, for: .harshPenalty)
-        self.eventMonitor.harsh = state == .on
-    }
-    
-    @IBAction func togglePenalizeClick(_ sender: NSMenuItem) {
-        let state = toggle(sender, for: .penalizeClick)
-        eventMonitorChange(state: state, for: .penalizeClick)
-    }
-    
-    @IBAction func togglePenalizeMovement(_ sender: NSMenuItem) {
-        let state = toggle(sender, for: .penalizeMovement)
-        eventMonitorChange(state: state, for: .penalizeMovement)
-    }
-    
-    @IBAction func togglePenalizeScrolling(_ sender: NSMenuItem) {
-        let state = toggle(sender, for: .penalizeScrolling)
-        eventMonitorChange(state: state, for: .penalizeScrolling)
-    }
-    
-    @IBAction func quit(_ sender: NSMenuItem) {
-        NSApplication.shared.terminate(self)
-    }
-    
-    // MARK: Actions
-    
-    func toggle (_ sender: NSMenuItem, for setting: Setting) -> NSControl.StateValue {
-        let state: NSControl.StateValue = sender.state == .on ? .off : .on
-        sender.state = state
-        setting.change(to: state)
-        return state
-    }
-    
-    func eventMonitorChange(state: NSControl.StateValue, for setting: Setting) {
-        if state == .on {
-            eventMonitor.start(setting: setting)
-        } else {
-            eventMonitor.stop(setting: setting)
+        if NSRunningApplication.runningApplications(withBundleIdentifier: launcherAppIdentifier).isEmpty {
+            let exePath = launcherURL.appendingPathComponent("Contents")
+                .appendingPathComponent("Library")
+                .appendingPathComponent("LoginItems")
+                .appendingPathComponent("BackgroundLauncher")
+                .appendingPathExtension("app")
+            try! NSWorkspace.shared.launchApplication(at: exePath, options: .default, configuration: [:])
         }
     }
-    
-    func startInBackground(_ value: Bool) {
-        let launcherAppIdentifier = "co.dudzik.NoMouse.BackgroundLauncher"
-        SMLoginItemSetEnabled(launcherAppIdentifier as CFString, value)
+
+    @IBAction func launchAtLogin(_ sender: NSButton) {
+        let isOn = sender.state == .on
+        SMLoginItemSetEnabled(launcherAppIdentifier as CFString, isOn)
+        UserDefaults.standard.set(isOn, forKey: "launchAtLogin")
     }
 
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
+    }
 }

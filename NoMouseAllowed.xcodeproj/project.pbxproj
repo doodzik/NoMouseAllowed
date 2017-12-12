@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		951E931C1FD5E0E70075DE09 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 951E931B1FD5E0E70075DE09 /* MainMenu.xib */; };
 		95349CF31F7A9FA5007CD4C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349CF21F7A9FA5007CD4C0 /* AppDelegate.swift */; };
 		95349CF51F7A9FA5007CD4C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95349CF41F7A9FA5007CD4C0 /* Assets.xcassets */; };
-		95349CF81F7A9FA5007CD4C0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95349CF61F7A9FA5007CD4C0 /* MainMenu.xib */; };
-		95349D011F7AA097007CD4C0 /* Monitors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D001F7AA097007CD4C0 /* Monitors.swift */; };
-		95349D031F7AC2A9007CD4C0 /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D021F7AC2A9007CD4C0 /* Monitor.swift */; };
-		95349D051F7AF97C007CD4C0 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D041F7AF97C007CD4C0 /* EventMonitor.swift */; };
 		95349D0D1F7B714A007CD4C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D0C1F7B714A007CD4C0 /* AppDelegate.swift */; };
-		95349D0F1F7B714A007CD4C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95349D0E1F7B714A007CD4C0 /* Assets.xcassets */; };
 		95349D191F7B72AE007CD4C0 /* BackgroundLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 95349D0A1F7B714A007CD4C0 /* BackgroundLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		95349D1C1F7B72E0007CD4C0 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95349D1B1F7B72E0007CD4C0 /* ServiceManagement.framework */; };
 		95349D1E1F7B72E7007CD4C0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95349D1D1F7B72E7007CD4C0 /* Cocoa.framework */; };
-		95349D201F7B857F007CD4C0 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D1F1F7B857F007CD4C0 /* Setting.swift */; };
+		957C21071FD5D10700EFBF5A /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D041F7AF97C007CD4C0 /* EventMonitor.swift */; };
+		957C21081FD5D10700EFBF5A /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D1F1F7B857F007CD4C0 /* Setting.swift */; };
+		957C21091FD5D10700EFBF5A /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D021F7AC2A9007CD4C0 /* Monitor.swift */; };
+		957C210A1FD5D10700EFBF5A /* Monitors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D001F7AA097007CD4C0 /* Monitors.swift */; };
+		957C210C1FD5D13B00EFBF5A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957C210B1FD5D13B00EFBF5A /* Media.xcassets */; };
+		957C210E1FD5D23A00EFBF5A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 957C210D1FD5D23A00EFBF5A /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,10 +36,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		951E931B1FD5E0E70075DE09 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		95349CEF1F7A9FA5007CD4C0 /* NoMouseAllowed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoMouseAllowed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95349CF21F7A9FA5007CD4C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95349CF41F7A9FA5007CD4C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		95349CF71F7A9FA5007CD4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		95349CF91F7A9FA5007CD4C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95349CFA1F7A9FA5007CD4C0 /* NoMouse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NoMouse.entitlements; sourceTree = "<group>"; };
 		95349D001F7AA097007CD4C0 /* Monitors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monitors.swift; sourceTree = "<group>"; };
@@ -46,12 +47,13 @@
 		95349D041F7AF97C007CD4C0 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		95349D0A1F7B714A007CD4C0 /* BackgroundLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95349D0C1F7B714A007CD4C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		95349D0E1F7B714A007CD4C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95349D131F7B714A007CD4C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95349D141F7B714A007CD4C0 /* BackgroundLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BackgroundLauncher.entitlements; sourceTree = "<group>"; };
 		95349D1B1F7B72E0007CD4C0 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		95349D1D1F7B72E7007CD4C0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		95349D1F1F7B857F007CD4C0 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		957C210B1FD5D13B00EFBF5A /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		957C210D1FD5D23A00EFBF5A /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,14 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				95349CF21F7A9FA5007CD4C0 /* AppDelegate.swift */,
-				95349D1F1F7B857F007CD4C0 /* Setting.swift */,
-				95349D041F7AF97C007CD4C0 /* EventMonitor.swift */,
-				95349D001F7AA097007CD4C0 /* Monitors.swift */,
-				95349D021F7AC2A9007CD4C0 /* Monitor.swift */,
 				95349CF41F7A9FA5007CD4C0 /* Assets.xcassets */,
-				95349CF61F7A9FA5007CD4C0 /* MainMenu.xib */,
 				95349CF91F7A9FA5007CD4C0 /* Info.plist */,
 				95349CFA1F7A9FA5007CD4C0 /* NoMouse.entitlements */,
+				957C210D1FD5D23A00EFBF5A /* MainMenu.xib */,
 			);
 			path = NoMouse;
 			sourceTree = "<group>";
@@ -113,9 +111,14 @@
 			isa = PBXGroup;
 			children = (
 				95349D0C1F7B714A007CD4C0 /* AppDelegate.swift */,
-				95349D0E1F7B714A007CD4C0 /* Assets.xcassets */,
+				951E931B1FD5E0E70075DE09 /* MainMenu.xib */,
+				95349D1F1F7B857F007CD4C0 /* Setting.swift */,
+				95349D041F7AF97C007CD4C0 /* EventMonitor.swift */,
+				95349D001F7AA097007CD4C0 /* Monitors.swift */,
+				95349D021F7AC2A9007CD4C0 /* Monitor.swift */,
 				95349D131F7B714A007CD4C0 /* Info.plist */,
 				95349D141F7B714A007CD4C0 /* BackgroundLauncher.entitlements */,
+				957C210B1FD5D13B00EFBF5A /* Media.xcassets */,
 			);
 			path = BackgroundLauncher;
 			sourceTree = "<group>";
@@ -212,7 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95349CF51F7A9FA5007CD4C0 /* Assets.xcassets in Resources */,
-				95349CF81F7A9FA5007CD4C0 /* MainMenu.xib in Resources */,
+				957C210E1FD5D23A00EFBF5A /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +223,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95349D0F1F7B714A007CD4C0 /* Assets.xcassets in Resources */,
+				957C210C1FD5D13B00EFBF5A /* Media.xcassets in Resources */,
+				951E931C1FD5E0E70075DE09 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,11 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95349D201F7B857F007CD4C0 /* Setting.swift in Sources */,
-				95349D011F7AA097007CD4C0 /* Monitors.swift in Sources */,
-				95349D031F7AC2A9007CD4C0 /* Monitor.swift in Sources */,
 				95349CF31F7A9FA5007CD4C0 /* AppDelegate.swift in Sources */,
-				95349D051F7AF97C007CD4C0 /* EventMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,22 +243,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				957C21091FD5D10700EFBF5A /* Monitor.swift in Sources */,
 				95349D0D1F7B714A007CD4C0 /* AppDelegate.swift in Sources */,
+				957C21071FD5D10700EFBF5A /* EventMonitor.swift in Sources */,
+				957C210A1FD5D10700EFBF5A /* Monitors.swift in Sources */,
+				957C21081FD5D10700EFBF5A /* Setting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		95349CF61F7A9FA5007CD4C0 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				95349CF71F7A9FA5007CD4C0 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		95349CFB1F7A9FA5007CD4C0 /* Debug */ = {
@@ -402,7 +395,6 @@
 		95349D161F7B714A007CD4C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BackgroundLauncher/BackgroundLauncher.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -419,7 +411,6 @@
 		95349D171F7B714A007CD4C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BackgroundLauncher/BackgroundLauncher.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;

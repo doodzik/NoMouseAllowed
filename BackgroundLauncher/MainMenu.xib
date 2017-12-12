@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner">
+            <connections>
+                <outlet property="delegate" destination="bG9-pf-doc" id="oFV-Bx-kl1"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="bG9-pf-doc" userLabel="Delegate" customClass="AppDelegateStatusBar" customModule="BackgroundLauncher" customModuleProvider="target">
+            <connections>
+                <outlet property="harshPenalty" destination="fhA-jN-hR2" id="7TB-9n-Piw"/>
+                <outlet property="menu" destination="RyM-Zx-4SY" id="Uxh-7e-iUc"/>
+                <outlet property="penalizeClick" destination="aG3-Iq-UfM" id="o94-d9-TEK"/>
+                <outlet property="penalizeScrolling" destination="2Wc-5o-i6y" id="Dfs-FE-Ofi"/>
+                <outlet property="penelizeMovement" destination="fnh-xZ-s4l" id="wQI-xa-7oM"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu id="RyM-Zx-4SY">
+            <items>
+                <menuItem title="Harsh Penalty" id="fhA-jN-hR2">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="toggleHarshPenalty:" target="bG9-pf-doc" id="UEp-44-A67"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Penalize Click" id="aG3-Iq-UfM">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="togglePenalizeClick:" target="bG9-pf-doc" id="lWo-94-nvm"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Penalize Movement" id="fnh-xZ-s4l">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="togglePenalizeMovement:" target="bG9-pf-doc" id="fvD-VM-ppz"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Penalize Scrolling" id="2Wc-5o-i6y">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="togglePenalizeScrolling:" target="bG9-pf-doc" id="srr-k8-7VA"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="WKH-dm-JgD"/>
+                <menuItem title="Launch at Login" id="Zkv-Me-dQF">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openAbout:" target="bG9-pf-doc" id="jra-qu-A8Q"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="About" id="2Fl-cX-54k">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openAbout:" target="bG9-pf-doc" id="tun-2n-3BX"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Quit" id="5b8-qi-Gc3">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quit:" target="bG9-pf-doc" id="3aL-AB-WRN"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="-83" y="329"/>
+        </menu>
+    </objects>
+</document>
