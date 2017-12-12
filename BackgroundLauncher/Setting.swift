@@ -10,7 +10,6 @@ import Foundation
 import Cocoa
 
 enum Setting: String {
-    case startAtLogin      = "inBackground"
     case harshPenalty      = "harshPenalty"
     case penalizeClick     = "penalizeClick"
     case penalizeMovement  = "penalizeMovement"

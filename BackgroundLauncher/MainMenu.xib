@@ -19,7 +19,6 @@
                 <outlet property="penalizeClick" destination="aG3-Iq-UfM" id="o94-d9-TEK"/>
                 <outlet property="penalizeScrolling" destination="2Wc-5o-i6y" id="Dfs-FE-Ofi"/>
                 <outlet property="penelizeMovement" destination="fnh-xZ-s4l" id="wQI-xa-7oM"/>
-                <outlet property="startAtLogin" destination="Zkv-Me-dQF" id="Ilv-5h-PCN"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -53,7 +52,7 @@
                 <menuItem title="Launch at Login" id="Zkv-Me-dQF">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="toggleStartAtLogin:" target="bG9-pf-doc" id="9nh-6G-LEN"/>
+                        <action selector="openAbout:" target="bG9-pf-doc" id="jra-qu-A8Q"/>
                     </connections>
                 </menuItem>
                 <menuItem title="About" id="2Fl-cX-54k">

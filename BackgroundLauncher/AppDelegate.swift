@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import ServiceManagement
 
 @NSApplicationMain
 class AppDelegateStatusBar: NSObject, NSApplicationDelegate {
@@ -21,11 +20,6 @@ class AppDelegateStatusBar: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var menu: NSMenu!
 
-    @IBOutlet weak var startAtLogin: NSMenuItem! {
-        didSet {
-            startAtLogin.state = Setting.startAtLogin.state
-        }
-    }
     @IBOutlet weak var harshPenalty: NSMenuItem! {
         didSet {
             harshPenalty.state = Setting.harshPenalty.state
@@ -60,6 +54,13 @@ class AppDelegateStatusBar: NSObject, NSApplicationDelegate {
     // MARK: Lifecycle
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+
+        let mainBundleId = Bundle.main.bundleIdentifier!
+        if !NSRunningApplication.runningApplications(withBundleIdentifier: mainBundleId).isEmpty {
+            NSApplication.shared.terminate(self)
+            return
+        }
+
         let icon = NSImage(named: NSImage.Name(rawValue: "statusIcon"))
         statusItem.image = icon
         statusItem.title = ""
@@ -71,11 +72,6 @@ class AppDelegateStatusBar: NSObject, NSApplicationDelegate {
     }
 
     // MARK: UI-Actions
-
-    @IBAction func toggleStartAtLogin(_ sender: NSMenuItem) {
-        let state = toggle(sender, for: .startAtLogin)
-        startInBackground(state == .on)
-    }
 
     @IBAction func toggleHarshPenalty(_ sender: NSMenuItem) {
         let state = toggle(sender, for: .harshPenalty)
@@ -119,11 +115,6 @@ class AppDelegateStatusBar: NSObject, NSApplicationDelegate {
 
     func eventMonitorChange(state: NSControl.StateValue, for setting: Setting) {
         state == .on ? eventMonitor.start(setting: setting) : eventMonitor.stop(setting: setting)
-    }
-
-    func startInBackground(_ value: Bool) {
-        let launcherAppIdentifier = "co.dudzik.NoMouse.BackgroundLauncher"
-        SMLoginItemSetEnabled(launcherAppIdentifier as CFString, value)
     }
 
 }
