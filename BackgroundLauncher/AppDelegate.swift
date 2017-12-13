@@ -56,7 +56,7 @@ class AppDelegateStatusBar: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
 
         let mainBundleId = Bundle.main.bundleIdentifier!
-        if !NSRunningApplication.runningApplications(withBundleIdentifier: mainBundleId).isEmpty {
+        if NSRunningApplication.runningApplications(withBundleIdentifier: mainBundleId).count > 1 {
             NSApplication.shared.terminate(self)
             return
         }

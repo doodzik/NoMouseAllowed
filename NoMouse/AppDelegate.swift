@@ -12,15 +12,15 @@ import ServiceManagement
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    let launcherAppIdentifier = "co.dudzik.NoMouse.BackgroundLauncher"
+    let launcherURL = Bundle.main.bundleURL
+    let bundleId = Bundle.main.bundleIdentifier
+
     @IBOutlet weak var launchAtLoginOutlet: NSButton! {
         didSet {
             launchAtLoginOutlet.state = UserDefaults.standard.bool(forKey: "launchAtLogin") ? .on : .off
         }
     }
-    
-    let launcherAppIdentifier = "co.dudzik.NoMouse.BackgroundLauncher"
-    let launcherURL = Bundle.main.bundleURL
-    let bundleId = Bundle.main.bundleIdentifier
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         if NSRunningApplication.runningApplications(withBundleIdentifier: launcherAppIdentifier).isEmpty {

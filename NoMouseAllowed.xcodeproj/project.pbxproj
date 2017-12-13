@@ -19,7 +19,7 @@
 		957C21091FD5D10700EFBF5A /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D021F7AC2A9007CD4C0 /* Monitor.swift */; };
 		957C210A1FD5D10700EFBF5A /* Monitors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95349D001F7AA097007CD4C0 /* Monitors.swift */; };
 		957C210C1FD5D13B00EFBF5A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957C210B1FD5D13B00EFBF5A /* Media.xcassets */; };
-		957C210E1FD5D23A00EFBF5A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 957C210D1FD5D23A00EFBF5A /* MainMenu.xib */; };
+		95B9F6031FE09C6C00002921 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95B9F6021FE09C6C00002921 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,7 +53,7 @@
 		95349D1D1F7B72E7007CD4C0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		95349D1F1F7B857F007CD4C0 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		957C210B1FD5D13B00EFBF5A /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		957C210D1FD5D23A00EFBF5A /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		95B9F6021FE09C6C00002921 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 				95349CF41F7A9FA5007CD4C0 /* Assets.xcassets */,
 				95349CF91F7A9FA5007CD4C0 /* Info.plist */,
 				95349CFA1F7A9FA5007CD4C0 /* NoMouse.entitlements */,
-				957C210D1FD5D23A00EFBF5A /* MainMenu.xib */,
+				95B9F6021FE09C6C00002921 /* MainMenu.xib */,
 			);
 			path = NoMouse;
 			sourceTree = "<group>";
@@ -215,7 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95349CF51F7A9FA5007CD4C0 /* Assets.xcassets in Resources */,
-				957C210E1FD5D23A00EFBF5A /* MainMenu.xib in Resources */,
+				95B9F6031FE09C6C00002921 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
