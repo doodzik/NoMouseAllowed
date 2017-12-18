@@ -13,7 +13,7 @@ You can choose wether you want to discourage clicking, moving or scrolling.
 
 Pull Requests are welcome.
 
-NoMouseAllowed was inspired by [NoMouse](https://github.com/brhs/nomouse). 
+NoMouseAllowed was inspired by [NoMouse](https://web.archive.org/web/20171006015757/https://github.com/brhs/nomouse). 
 
 Please don't publish this project in the App Store.
 
