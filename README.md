@@ -4,12 +4,12 @@
 
 [Download in the App Store](https://itunes.apple.com/us/app/nomouseallowed/id1291268168?mt=12)
 
-[Watch a short demonstration (1,7mb)](http://data.dudzik.co/nomouseallowed-demo.gif)
-
 NoMouseAllowed nudges the user towards using the keyboard by discouraging the use of the mouse.
 It lowers the screen brightness when you use your mouse.
 The brightness gets restored after 4 seconds.
 You can choose wether you want to discourage clicking, moving or scrolling.
+
+![demonstration NoMouseAllowed](http://data.dudzik.co/nomouseallowed-demo.gif)
 
 Pull Requests are welcome.
 
