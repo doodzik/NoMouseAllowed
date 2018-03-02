@@ -1,5 +1,3 @@
-# [![Logo](logo.png)](https://github.com/doodzik/NoMouseAllowed)
-
 # NoMouseAllowed
 
 [Download in the App Store](https://itunes.apple.com/us/app/nomouseallowed/id1291268168?mt=12)
