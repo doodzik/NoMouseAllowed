@@ -57,7 +57,7 @@
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fjr-sv-Lzb">
                         <rect key="frame" x="18" y="110" width="418" height="34"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="You can decide weather you want to discourage clicking, moving or scrolling through the status." id="I0a-o8-Paa">
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="You can decide whether you want to discourage clicking, moving or scrolling through the status." id="I0a-o8-Paa">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
